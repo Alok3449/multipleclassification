@@ -32,3 +32,24 @@ def zeroToHundred(n):
 
 for i in range(0, 100):
     print(zeroToHundred(i), end=",")
+
+
+def HundredTo999(n):
+    if n<=99:
+        return zeroToHundred(n)
+    
+    hundreds_place = n // 100
+    rest = n % 100
+
+    if rest == 0:
+        return f"{zeroToNine(hundreds_place)} Hundred"
+    else:
+        return f"{zeroToNine(hundreds_place)} Hundred and {zeroToHundred(rest)}"
+
+
+
+
+
+for i in range(0, 1000):
+    print(HundredTo999(i), end=", ")
+    
