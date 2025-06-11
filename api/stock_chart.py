@@ -7,7 +7,7 @@ def plot_stock_trend(ticker, company_name):
     data = yf.download(ticker, period="12d", interval="1d")
 
     if data.empty:
-        print(f"❌ No data found for {company_name} ({ticker})")
+        print(f" No data found for {company_name} ({ticker})")
         return
 
     dates = data.index.strftime('%Y-%m-%d').tolist()
