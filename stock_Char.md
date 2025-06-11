@@ -1,0 +1,1 @@
+![alt text](PNB_Bank_Stock_Trend.PNG) ![alt text](Reliance_Private_Limited.PNG)  ![alt text](Tata_Steel_Stock_Trend.PNG)

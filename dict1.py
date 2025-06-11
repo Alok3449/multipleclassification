@@ -140,3 +140,35 @@ def count_frequencies(numbers):
 input_list = [1, 2, 2, 3, 4, 4, 4]
 result = count_frequencies(input_list)
 print(result)  # Output: {1: 1, 2: 2, 3: 1, 4: 3}
+
+
+
+# Define the nested dictionary
+contacts = {
+    "Alice": {
+        "address": "123 Maple Street",
+        "phone": "555-1234",
+        "email": "alice@example.com"
+    },
+    "Bob": {
+        "address": "456 Oak Avenue",
+        "phone": "555-5678",
+        "email": "bob@example.com"
+    }
+}
+
+# Define the function
+def get_contact_info(name, key):
+    if name in contacts:
+        if key in contacts[name]:
+            return contacts[name][key]
+        else:
+            return f"Key '{key}' not found for {name}."
+    else:
+        return f"Name '{name}' not found in contacts."
+
+# Example usage
+print(get_contact_info("Alice", "phone"))     # Output: 555-1234
+print(get_contact_info("Bob", "email"))       # Output: bob@example.com
+print(get_contact_info("Charlie", "phone"))   # Output: Name 'Charlie' not found in contacts.
+print(get_contact_info("Alice", "birthday"))  # Output: Key 'birthday' not found for Alice.
